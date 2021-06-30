@@ -13,10 +13,9 @@ public class Config {
 	public static Config instance = new Config();
 
 	private Config() {
-
 	}
 
-	public static final ForgeConfigSpec COMMON = ConfigValues.build();
+	public static final ForgeConfigSpec CLIENT = ConfigValues.build();
 
 	public void loadConfig(ForgeConfigSpec spec, Path path) {
 

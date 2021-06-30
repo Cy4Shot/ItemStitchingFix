@@ -5,9 +5,11 @@ license="MIT"
 modId="itemstitchingfix"
 version="1.0"
 displayName="Item Stitching Fix"
-credits="Mod by Cy4."
+logoFile="logo.png"
+credits="Mod by Cy4, Original Fabric Mod by PepperCode1"
 description='''
-Mod by cy4.
+A mod that fixes the small gap between the sides of generated item models!
+The mod comes with a config where you can configure between various algorithms.
 '''
 
 [[dependencies.itemstitchingfix]]
