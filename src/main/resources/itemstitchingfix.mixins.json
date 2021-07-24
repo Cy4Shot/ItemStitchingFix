@@ -3,6 +3,7 @@
 	"minVersion": "0.8",
 	"package": "com.cy4.itemstitchingfix.mixin",
 	"compatibilityLevel": "JAVA_8",
+	"refmap": "itemstitchingfix.refmap.json",
 	"client": [
 		"ItemModelGeneratorMixin"
 	],

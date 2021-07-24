@@ -34,8 +34,7 @@ minecraft {
     runs {
         client {
             workingDirectory project.file('run')
-            properties 'mixin.env.disableRefMap': 'true'
-            arg "-mixin.config="+archivesBaseName+".mixins.json"
+            arg "-mixin.config=itemstitchingfix.mixins.json"
 
             mods {
                 itemstitchingfix {
@@ -46,8 +45,7 @@ minecraft {
 
         server {
             workingDirectory project.file('run')
-            properties 'mixin.env.disableRefMap': 'true'
-            arg "-mixin.config="+archivesBaseName+".mixins.json"
+            arg "-mixin.config=itemstitchingfix.mixins.json"
 
             mods {
                 itemstitchingfix {
