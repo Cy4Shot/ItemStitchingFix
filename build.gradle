@@ -14,6 +14,10 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 apply plugin: 'org.spongepowered.mixin'
 
+mixin {
+    add sourceSets.main, "itemstitchingfix.refmap.json"
+}
+
 version = '2.0'
 group = 'com.cy4.itemstitchingfix'
 archivesBaseName = 'ItemStitchingFix'
@@ -48,7 +52,7 @@ repositories {
 
 dependencies {
     minecraft 'net.minecraftforge:forge:1.18.1-39.0.88'
-    annotationProcessor 'org.spongepowered:mixin:0.8.3:processor'
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 }
 
 jar {
@@ -60,7 +64,8 @@ jar {
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
                 "Implementation-Vendor"   : "Cy4",
-                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
+                "MixinConfigs": "itemstitchingfix.mixins.json"
         ])
     }
 }
