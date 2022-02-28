@@ -1,26 +1,47 @@
-modLoader="javafml"
-loaderVersion="[36,)"
-license="MIT"
-[[mods]]
-modId="itemstitchingfix"
-version="1.0"
-displayName="Item Stitching Fix"
-logoFile="logo.png"
-credits="Mod by Cy4, Original Fabric Mod by PepperCode1"
+modLoader="javafml" #mandatory
+loaderVersion="[39,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+license="GNU Lesser v3"
+#issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/" #optional
+
+[[mods]] #mandatory
+modId="itemstitchingfix" #mandatory
+
+
+
+version="${file.jarVersion}" #mandatory
+ 
+displayName="Item Stitching Fix" #mandatory
+
+#updateJSONURL="https://change.me.example.invalid/updates.json" #optional
+
+#displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
+
+logoFile="logo.png" #optional
+
+credits="Thanks to PepperCode1 for writing most of the logic part for this mod" #optional
+
+authors="Cy4" #optional
+
 description='''
-A mod that fixes the small gap between the sides of generated item models!
-The mod comes with a config where you can configure between various algorithms.
+A forge port of a fabric mod that removes the annoying gap in item models!
 '''
 
-[[dependencies.itemstitchingfix]]
-    modId="forge"
-    mandatory=true
-    versionRange="[36,)"
+[[dependencies.itemstitchingfix]] #optional
+    
+    modId="forge" #mandatory
+    
+    mandatory=true #mandatory
+    
+    versionRange="[39,)" #mandatory
+    
     ordering="NONE"
+    
     side="BOTH"
+
 [[dependencies.itemstitchingfix]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.16.4,1.17)"
+
+    versionRange="[1.18.1,1.19)"
     ordering="NONE"
     side="BOTH"
