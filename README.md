@@ -1,3 +1,5 @@
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J1BCKUH)
+
 # ItemStitchingFix
 
 A mod that fixes the annoying gap in your Item Models in Minecraft!
