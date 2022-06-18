@@ -17,10 +17,10 @@ The mod comes with a config where you can configure between various algorithms.
     mandatory=true
     versionRange="[36,)"
     ordering="NONE"
-    side="BOTH"
+    side="CLIENT"
 [[dependencies.itemstitchingfix]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.16.4,1.17)"
     ordering="NONE"
-    side="BOTH"
+    side="CLIENT"
