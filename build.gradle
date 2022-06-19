@@ -18,7 +18,7 @@ mixin {
     add sourceSets.main, "itemstitchingfix.refmap.json"
 }
 
-version = '2.0'
+version = '2.1'
 group = 'com.cy4.itemstitchingfix'
 archivesBaseName = 'ItemStitchingFix'
 

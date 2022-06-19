@@ -6,8 +6,6 @@ license="GNU Lesser v3"
 [[mods]] #mandatory
 modId="itemstitchingfix" #mandatory
 
-
-
 version="${file.jarVersion}" #mandatory
  
 displayName="Item Stitching Fix" #mandatory
@@ -36,7 +34,7 @@ A forge port of a fabric mod that removes the annoying gap in item models!
     
     ordering="NONE"
     
-    side="BOTH"
+    side="CLIENT"
 
 [[dependencies.itemstitchingfix]]
     modId="minecraft"
@@ -44,4 +42,4 @@ A forge port of a fabric mod that removes the annoying gap in item models!
 
     versionRange="[1.18.1,1.19)"
     ordering="NONE"
-    side="BOTH"
+    side="CLIENT"
