@@ -30,7 +30,7 @@ A forge port of a fabric mod that removes the annoying gap in item models!
     
     mandatory=true #mandatory
     
-    versionRange="[39,)" #mandatory
+    versionRange="[41,)" #mandatory
     
     ordering="NONE"
     
@@ -40,6 +40,6 @@ A forge port of a fabric mod that removes the annoying gap in item models!
     modId="minecraft"
     mandatory=true
 
-    versionRange="[1.18.1,1.19)"
+    versionRange="[1.19,1.20)"
     ordering="NONE"
     side="CLIENT"

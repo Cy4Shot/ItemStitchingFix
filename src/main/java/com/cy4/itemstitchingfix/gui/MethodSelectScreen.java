@@ -8,32 +8,33 @@ import net.minecraft.client.gui.components.Widget;
 import net.minecraft.client.gui.components.events.GuiEventListener;
 import net.minecraft.client.gui.narration.NarratableEntry;
 import net.minecraft.client.gui.screens.Screen;
-import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
+import net.minecraft.network.chat.contents.LiteralContents;
 
 public class MethodSelectScreen extends Screen {
 
 	Button selectButton;
 
 	public MethodSelectScreen() {
-		super(new TextComponent("Select Method For Rendering"));
+		super(create("Select Method For Rendering"));
 	}
 
 	public void cycleButton() {
 		ItemStitchingFixConfig.method.set(ItemStitchingFixConfig.method.get().next());
-		selectButton.setMessage(new TextComponent(ItemStitchingFixConfig.method.get().toString()));
+		selectButton.setMessage(create(ItemStitchingFixConfig.method.get().toString()));
 	}
-	
 
 	@Override
 	protected void init() {
 		selectButton = new Button(this.width / 2 - 100, this.height / 2 - 10, 200, 20,
-				new TextComponent(ItemStitchingFixConfig.method.get().toString()), (p_96781_) -> {
+				create(ItemStitchingFixConfig.method.get().toString()), (p_96781_) -> {
 					this.cycleButton();
 				});
 		this.addRenderableWidget(selectButton);
-		
-		this.addRenderableWidget(new Button(this.width / 2 - 100, this.height / 2 + 15, 200, 20,
-				new TextComponent("Save and Exit"), (p_96781_) -> {
+
+		this.addRenderableWidget(
+				new Button(this.width / 2 - 100, this.height / 2 + 15, 200, 20, create("Save and Exit"), (p_96781_) -> {
 					this.onClose();
 					minecraft.reloadResourcePacks();
 				}));
@@ -50,4 +51,7 @@ public class MethodSelectScreen extends Screen {
 		return this.addWidget(p_169406_);
 	}
 
+	private static Component create(String text) {
+		return MutableComponent.create(new LiteralContents(text));
+	}
 }

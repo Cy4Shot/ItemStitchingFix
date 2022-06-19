@@ -18,7 +18,7 @@ mixin {
     add sourceSets.main, "itemstitchingfix.refmap.json"
 }
 
-version = '2.1'
+version = '3.0'
 group = 'com.cy4.itemstitchingfix'
 archivesBaseName = 'ItemStitchingFix'
 
@@ -27,7 +27,7 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
 minecraft {
 
-	mappings channel: 'official', version: "1.18.1"
+	mappings channel: 'official', version: "1.19"
 
     runs {
         client {
@@ -51,7 +51,7 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.18.1-39.0.88'
+    minecraft 'net.minecraftforge:forge:1.19-41.0.38'
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 }
 
@@ -60,7 +60,7 @@ jar {
         attributes([
                 "Specification-Title"     : "itemstitchingfix",
                 "Specification-Vendor"    : "Cy4",
-                "Specification-Version"   : "2", // We are version 1 of ourselves
+                "Specification-Version"   : "3", // We are version 1 of ourselves
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
                 "Implementation-Vendor"   : "Cy4",
@@ -85,4 +85,8 @@ publishing {
             url "file://${project.projectDir}/mcmodsrepo"
         }
     }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
 }
